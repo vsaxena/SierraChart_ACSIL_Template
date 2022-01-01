@@ -4,17 +4,24 @@
 
 class Test_2 : public Study
 {
-public:
-	Test_2(SCStudyInterfaceRef sc);
-	~Test_2();
+	public:
+		Test_2(SCStudyInterfaceRef sc);
+		~Test_2();
 
-	void DoInit();
-	void DoCleanUp();
-
-	void SetReferences(SCStudyInterfaceRef sc_);
-	void DoSetDefaults(SCStudyInterfaceRef sc_);
-	void DoStudy(SCStudyInterfaceRef sc_);
-	void Run(SCStudyInterfaceRef sc_);
+		void DoInit();
+		void DoCleanUp();
 	
-	bool Initialized = FALSE;
+		void SetReferences(SCPtr sc_);
+		void DoSetDefaults();
+		void DoStudy();
+		void Run();
+	
+	protected:
+		s_SCInput_145* samp1;
+		SCFloatArray* mid;
+		s_SCSubgraph_260* Mid;
+	
+	private:
+		bool Initialized = FALSE;
+		int cI;
 }; 

@@ -12,36 +12,25 @@ void Test_3::DoInit() {
 void Test_3::DoCleanUp() {}
 
 // Setup of study input values
-void Test_3::SetReferences(SCStudyInterfaceRef sc_) {
+void Test_3::SetReferences(SCPtr sc_) {
 
 }
+
 // setup of sc defaults
-void Test_3::DoSetDefaults(SCStudyInterfaceRef sc_) {
+void Test_3::DoSetDefaults() {
 	int t = 0;
 	int	i = 0;
-	sc_.GraphName = "Abc";
-	sc_.StudyDescription = "Abc";
-	sc_.AutoLoop = 1;
-	sc_.GraphRegion = 0;
-	sc_.Subgraph[t].Name = "Abc";
-	sc_.Subgraph[++t].Name = "Abc";
-	sc_.Input[i].Name = "Abc";
-	sc_.Input[++i].Name = "Abc";
-}
-// Entry point into study execution
-void Test_3::DoStudy(SCStudyInterfaceRef sc_) {
+	_sc->GraphName = "Abc";
+	_sc->StudyDescription = "Abc";
+	_sc->AutoLoop = 1;
+	_sc->GraphRegion = 0;
+	_sc->Subgraph[t].Name = "Abc";
+	_sc->Subgraph[++t].Name = "Abc";
+	_sc->Input[i].Name = "Abc";
+	_sc->Input[++i].Name = "Abc";
 }
 
-void Test_3::Run(SCStudyInterfaceRef sc_) {
-	if (!Initialized) {
-		DoInit();
-	}
-	if (sc_.SetDefaults) {
-		DoSetDefaults(sc_);
-	}
-	if (sc_.LastCallToFunction) {
-		DoCleanUp();
-		return;
-	}
-	DoStudy(sc_);
+// Entry point into study execution
+void Test_3::DoStudy() {
 }
+

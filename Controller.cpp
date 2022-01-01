@@ -25,8 +25,8 @@ Study* Study::StartStudy(StudyType StudyType_, SCStudyInterfaceRef sc_) {
         sc_.SetPersistentPointer(1, study); 
     }
 
-    study->SetReferences(sc_);
-    study->Run(sc_);
+    study->SetReferences(&sc_);
+    study->Run();
 
     if (sc_.LastCallToFunction || IsDLLInit) {
         delete study;
@@ -36,3 +36,16 @@ Study* Study::StartStudy(StudyType StudyType_, SCStudyInterfaceRef sc_) {
     return study;
 }
 
+void Study::Run() {
+    if (!Initialized) {
+        DoInit();
+    }
+    if (_sc->SetDefaults) {
+        DoSetDefaults();
+    }
+    if (_sc->LastCallToFunction) {
+        DoCleanUp();
+        return;
+    }
+    DoStudy();
+}
