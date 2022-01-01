@@ -17,14 +17,7 @@
 			void DoStudy(SCStudyInterfaceRef sc_);
 			void Run(SCStudyInterfaceRef sc_);
 			
-			/*
-			s_SCInput_145& SampIn1;
-			s_SCInput_145& SampIn2;
-			s_SCInput_145& SampIn3;
-			SCFloatArray& mid;
-			SCSubgraph260Ref& Mid;
-			*/
-
 			bool Initialized = FALSE;
 
+			int mid;
 	};
