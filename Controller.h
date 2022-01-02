@@ -26,6 +26,5 @@ class Study {
         SCPtr _sc;
 
     private:
-        static Study* study;
         bool Initialized = FALSE;
 };
