@@ -13,7 +13,7 @@ typedef s_sc* SCPtr;
 class Study {
     public:
         Study(SCStudyInterfaceRef sc_) { return; }
-	virtual void ~Study();
+        virtual ~Study() {};
         static Study* StartStudy(StudyType StudyType_, SCStudyInterfaceRef sc_);
 
     protected:
