@@ -10,4 +10,4 @@ studies for ACSIL/Sierra Chart
 *Note: This is intended for use/compilation using Visual Studio and Solution Project dependencies*
 
 
-**NOTE: Please use at your own risk... Financial markets->risk, blah blah blah... be smart!**
+***SUPER-NOTE:*** *Please use at your own risk... Financial markets->risk, blah blah blah... be smart!
