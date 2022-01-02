@@ -11,9 +11,9 @@ typedef enum StudyType
 typedef s_sc* SCPtr;
 
 class Study {
-	public:
+    public:
         Study(SCStudyInterfaceRef sc_) { return; }
-
+	virtual void ~Study();
         static Study* StartStudy(StudyType StudyType_, SCStudyInterfaceRef sc_);
 
     protected:
