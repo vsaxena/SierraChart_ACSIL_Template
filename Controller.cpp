@@ -15,12 +15,12 @@ Study* Study::StartStudy(StudyType StudyType_, SCStudyInterfaceRef sc_) {
         case TEST_STUDY1:
             study = new Test_1(sc_);
             break;
-        case TEST_STUDY2:
+        /*case TEST_STUDY2:
             study = new Test_2(sc_);
             break;
         case TEST_STUDY3:
             study = new Test_3(sc_);
-            break;
+            break;  */
         }
         sc_.SetPersistentPointer(1, study); 
     }

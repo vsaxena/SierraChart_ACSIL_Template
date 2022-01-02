@@ -45,22 +45,20 @@ void Test_1::DoSetDefaults() {
 // Entry point into study execution
 void Test_1::DoStudy() {
 
-	Mid->operator[][cI] = mid[cI];
+	//Mid[cI] = &(mid[cI]);
 }
 
 
-/*
 void Test_1::Run() {
 	if (!Initialized) {
 		DoInit();
 	}
-	if (sc_.SetDefaults) {
+	if (_sc->SetDefaults) {
 		DoSetDefaults();
 	}
-	if (sc_.LastCallToFunction) {
+	if (_sc->LastCallToFunction) {
 		DoCleanUp();
 		return;
 	}
 	DoStudy();
 }
-*/
