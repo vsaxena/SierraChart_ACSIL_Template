@@ -18,8 +18,8 @@ class Test_1: public Study
 	
 	protected:
 		s_SCInput_145* samp1;
-		SCFloatArray* mid;
-		s_SCSubgraph_260* Mid;
+		SCFloatArray mid;
+		s_SCSubgraph_260 Mid;
 			
 	private:
 		bool Initialized = FALSE;

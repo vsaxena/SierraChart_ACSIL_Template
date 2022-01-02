@@ -19,10 +19,10 @@ void Test_1::SetReferences(SCPtr sc_) {
 	_sc = sc_;
 	
 	// Access Chart Data
-	mid = &(_sc->HLAvg);
+	mid = (_sc->HLAvg);
 
 	// Access Subgraphs
-	Mid = &(_sc->Subgraph[0]);
+	Mid = (_sc->Subgraph[0]);
 	
 	// Access User Inputs
 	samp1 = &(_sc->Input[0]);
@@ -37,7 +37,7 @@ void Test_1::DoSetDefaults() {
 	_sc->StudyDescription = "Abc";
 	_sc->AutoLoop = 1;
 	_sc->GraphRegion = 0;
-	Mid->Name = "Abc";
+	Mid.Name = "Abc";
 	samp1->Name = "Abc";
 	samp1->SetInt(5);
 }
@@ -45,7 +45,7 @@ void Test_1::DoSetDefaults() {
 // Entry point into study execution
 void Test_1::DoStudy() {
 
-	//Mid[cI] = &(mid[cI]);
+	Mid[cI] = mid[cI];
 }
 
 
