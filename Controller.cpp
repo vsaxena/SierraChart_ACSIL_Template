@@ -5,7 +5,7 @@ Study* Study::StartStudy(StudyType StudyType_, SCStudyInterfaceRef sc_) {
          
     const bool IsDLLInit = sc_.SetDefaults && sc_.ArraySize == 0;
 
-    Study* study = IsDLLInit ? NULL : static_cast<Study*>(sc_.GetPersistentPointer(1));
+    Study::study = IsDLLInit ? NULL : static_cast<Study*>(sc_.GetPersistentPointer(1));
 
     if (study == NULL) {
 
