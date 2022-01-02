@@ -5,8 +5,7 @@
 typedef enum StudyType
 {
     TEST_STUDY1
-    //TEST_STUDY2,
-    //TEST_STUDY3
+
 }StudyType_ ;
 
 typedef s_sc* SCPtr;

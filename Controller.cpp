@@ -1,7 +1,5 @@
 #include "Controller.h"
 #include "test_study_1.h"
-#include "test_study_2.h"
-#include "test_study_3.h"
 
 Study* Study::StartStudy(StudyType StudyType_, SCStudyInterfaceRef sc_) {
          
@@ -15,12 +13,6 @@ Study* Study::StartStudy(StudyType StudyType_, SCStudyInterfaceRef sc_) {
         case TEST_STUDY1:
             study = new Test_1(sc_);
             break;
-        /*case TEST_STUDY2:
-            study = new Test_2(sc_);
-            break;
-        case TEST_STUDY3:
-            study = new Test_3(sc_);
-            break;  */
         }
         sc_.SetPersistentPointer(1, study); 
     }
@@ -34,18 +26,4 @@ Study* Study::StartStudy(StudyType StudyType_, SCStudyInterfaceRef sc_) {
         sc_.SetPersistentPointer(1, study);
     }
     return study;
-}
-
-void Study::Run() {
-    if (!Initialized) {
-        DoInit();
-    }
-    if (_sc->SetDefaults) {
-        DoSetDefaults();
-    }
-    if (_sc->LastCallToFunction) {
-        DoCleanUp();
-        return;
-    }
-    DoStudy();
 }

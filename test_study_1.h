@@ -1,6 +1,5 @@
 #pragma once
 #include "Controller.h"
-#include "sierrachart.h"
 
 class Test_1: public Study
 {
@@ -18,9 +17,9 @@ class Test_1: public Study
 	
 	protected:
 		s_SCInput_145* samp1;
-		SCFloatArray mid;
-		s_SCSubgraph_260 Mid;
-			
+		SCFloatArray* HLAvg;
+		s_SCSubgraph_260* Mid;
+
 	private:
 		bool Initialized = FALSE;
 		int cI;
