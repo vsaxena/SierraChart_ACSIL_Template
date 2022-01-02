@@ -8,3 +8,5 @@ studies ACSIL/Sierra Chart
 - check class structure
   - are definitions in the proper access specifier
 - delete any unnecessary things
+- any unmanaged memory that needs managed
+  - no *new* usage, so expect not
