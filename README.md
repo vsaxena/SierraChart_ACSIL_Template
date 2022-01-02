@@ -8,3 +8,6 @@ studies for ACSIL/Sierra Chart
     will need to be performed on classes. 
 
 *Note: This is intended for use/compilation using Visual Studio and Solution Project dependencies*
+
+
+**NOTE: Please use at your own risk... Financial markets->risk, blah blah blah... be smart!**
