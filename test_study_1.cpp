@@ -2,8 +2,7 @@
 
 Test_1::Test_1(SCStudyInterfaceRef sc) : Study(sc) {}
 
-Test_1::~Test_1() {
-	//Does anything need deleted here?	
+Test_1::~Test_1() {	
 	return;
 }
 
@@ -32,21 +31,21 @@ void Test_1::SetReferences(SCPtr sc_) {
 
 // setup of sc defaults
 void Test_1::DoSetDefaults() {
-	_sc->GraphName = "Abc";
-	_sc->StudyDescription = "Abc";
+	_sc->GraphName = "Template Study";
+	_sc->StudyDescription = "Template Study";
 	_sc->AutoLoop = 1;
 	_sc->GraphRegion = 0;
-	Mid->Name = "Abc";
+	Mid->Name = "Temp";
 	Mid->PrimaryColor = RGB(100,200,230);
 	Mid->LineWidth = 3;
-	samp1->Name = "Abc";
+	samp1->Name = "Temp";
 	samp1->SetInt(5);
 }
 
 // Entry point into study execution
 void Test_1::DoStudy() {
 	// Sample output to test working
-	Mid->Data.ElementAt(cI) = HLAvg->ElementAt(cI);
+	Mid->Data.ElementAt(cI) = HLAvg->ElementAt(cI) * (samp1->GetInt()/samp1->GetInt());
 }
 
 void Test_1::Run() {

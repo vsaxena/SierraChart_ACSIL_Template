@@ -29,7 +29,3 @@ class Study {
         static Study* study;
         bool Initialized = FALSE;
 };
-
-
-  
-
