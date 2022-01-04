@@ -1,4 +1,4 @@
-#include "test_study_1.h"
+#include "\test_study_1.h"
 
 Test_1::Test_1(SCStudyInterfaceRef sc) : Study(sc) {}
 
