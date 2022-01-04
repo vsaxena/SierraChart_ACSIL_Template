@@ -8,7 +8,15 @@ typedef enum StudyType
 
 }StudyType_ ;
 
+
+// Using ifndef here so this only occurs once,
+// but is still in the 'global' scope, since
+// study class files need to #include controller.h
+// ?? is this necessary since we're doing #pragma once?
+#ifndef typedef s_sc* SCPtr;
 typedef s_sc* SCPtr;
+#endif
+
 
 class Study {
     public:
@@ -24,7 +32,4 @@ class Study {
         virtual void DoInit() = 0;
         virtual void DoCleanUp() = 0;
         SCPtr _sc;
-
-    private:
-        bool Initialized = FALSE;
 };
