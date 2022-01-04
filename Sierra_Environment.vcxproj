@@ -162,15 +162,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="test_study_1.cpp" />
-    <ClCompile Include="Entry_Way.cpp" />
+    <ClCompile Include="source\test_study_1.cpp" />
+    <ClCompile Include="source\Entry_Way.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Controller.h" />
-    <ClInclude Include="test_study_1.h" />
+    <ClInclude Include="source\Controller.h" />
+    <ClInclude Include="source\test_study_1.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Controller.cpp" />
+    <None Include="source\Controller.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

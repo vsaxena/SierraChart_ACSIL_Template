@@ -15,23 +15,23 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Entry_Way.cpp">
+    <ClCompile Include="source\test_study_1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="test_study_1.cpp">
+    <ClCompile Include="source\Entry_Way.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Controller.h">
+    <ClInclude Include="source\test_study_1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="test_study_1.h">
+    <ClInclude Include="source\Controller.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Controller.cpp">
+    <None Include="source\Controller.cpp">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>

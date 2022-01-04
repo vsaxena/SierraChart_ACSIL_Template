@@ -1,5 +1,5 @@
-#include "\Controller.h"
-#include "\test_study_1.h"
+#include "Controller.h"
+#include "test_study_1.h"
 
 Study* Study::StartStudy(StudyType StudyType_, SCStudyInterfaceRef sc_) {
          

@@ -1,4 +1,4 @@
-#include "\Controller.cpp"
+#include "Controller.cpp"
 
 
 SCDLLName("Study Design Template")
