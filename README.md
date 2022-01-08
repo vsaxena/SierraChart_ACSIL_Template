@@ -11,3 +11,10 @@ studies for ACSIL/Sierra Chart
 
 
 ***SUPER-NOTE:*** *Please use at your own risk... Financial markets-> risk-> blah blah blah... be smart!*
+
+
+
+
+personal To-Do on project:
+- Remove comments from code 
+- Create 'wiki' documentation explaining things
