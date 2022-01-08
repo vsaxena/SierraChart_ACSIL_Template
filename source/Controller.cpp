@@ -13,6 +13,15 @@ Study* Study::StartStudy(StudyType StudyType_, SCStudyInterfaceRef sc_) {
         case TEST_STUDY1:
             study = new Test_1(sc_);
             break;
+        /******************************************* 
+        *   Add additional studies to controller
+        *   where new Test_1(sc_) is the study class constructor
+        *   and where TEST_STUDY1 is the enum value for study
+        ********************************************
+        case TEST_STUDY1:
+            study = new Test_1(sc_);
+            break;
+        */
         }
         sc_.SetPersistentPointer(1, study); 
     }

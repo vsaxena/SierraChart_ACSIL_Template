@@ -1,6 +1,8 @@
 #pragma once
 #include "Controller.h"
 
+// will be looking to replace class name with $safeprojectname$ or similar
+
 class Test_1: public Study
 {
 	public:

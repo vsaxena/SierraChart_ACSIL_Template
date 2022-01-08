@@ -2,22 +2,19 @@
 #include "sierrachart.h"
 #include <cmath>
 
+// Add additional Study names to enum when created
 typedef enum StudyType
 {
     TEST_STUDY1
-
+    /* samplestudy1, 
+    *  samplestudy2,
+    *  samplestudy3
+    */
 }StudyType_ ;
 
-
-// Using ifndef here so this only occurs once,
-// but is still in the 'global' scope, since
-// study class files need to #include controller.h
-// ?? is this necessary since we're doing #pragma once?
-#ifndef typedef s_sc* SCPtr;
 typedef s_sc* SCPtr;
-#endif
 
-
+// Base class that controls studies
 class Study {
     public:
         Study(SCStudyInterfaceRef sc_) { return; }
