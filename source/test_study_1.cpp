@@ -32,31 +32,36 @@ void Test_1::DoCleanUp() {}
 void Test_1::SetReferences(SCPtr sc_) {
 	_sc = sc_;
 	
-	// Access Chart Data **not necessarily necessary**
+	// Access Chart Data **not necessarily necessary in this manner**
 	HLAvg = &(_sc->HLAvg);
 
 	// Access Subgraphs
-	Mid = &(_sc->Subgraph[0]);
+	int sg = 0;
+	Mid = &(_sc->Subgraph[sg++]);
 
 	// Access User Inputs
-	samp1 = &(_sc->Input[0]);
+	int ind = 0;
+	samp1 = &(_sc->Input[ind++]);
 	
-	// Set any other refs
+	// Set any other refs you want
 	cI = (_sc->Index);
 }
 
 /*********************************************
-*	setup of sc defaults, this is the normal 'if(sc.SetDefaults)'
+*	Setup of sc defaults, this is the normal 'if(sc.SetDefaults)'
 *	block from a vanilla acsil study
 *********************************************/
 void Test_1::DoSetDefaults() {
+	// SC variables
 	_sc->GraphName = "Template Study";
 	_sc->StudyDescription = "Template Study";
 	_sc->AutoLoop = 1;
 	_sc->GraphRegion = 0;
+	// Subgraphs
 	Mid->Name = "Temp";
 	Mid->PrimaryColor = RGB(100,200,230);
 	Mid->LineWidth = 3;
+	// User Inputs
 	samp1->Name = "Temp";
 	samp1->SetInt(5);
 }
@@ -76,6 +81,11 @@ void Test_1::DoStudy() {
 
 }
 
+/********************************************
+*	This is kind of like our study's own
+*	'main' func if you will, in that this
+*	controls the study calculation lifecycle
+*********************************************/
 void Test_1::Run() {
 	if (!Initialized) {
 		DoInit();

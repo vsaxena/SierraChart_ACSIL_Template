@@ -17,10 +17,11 @@ class Test_1: public Study
 		void DoStudy();
 		void Run();
 	
-	/* Any variables needed for study calculation
-	*  or for referencing user input or for 
-	*  setting subgraph values, add to private:
-	*/	
+	/********************************************* 
+	*	Any variables needed for study calculation
+	*	or for referencing user input or for 
+	*	setting subgraph values, add to private:
+	*********************************************/	
 	private:
 		bool Initialized = FALSE;
 		int cI;
