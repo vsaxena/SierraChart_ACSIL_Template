@@ -2,17 +2,33 @@
 
 Test_1::Test_1(SCStudyInterfaceRef sc) : Study(sc) {}
 
+/*********************************************	
+*	if any other classes exist that create
+*	objects during a study call, use study
+*	class destructor to clean them up
+*********************************************/
 Test_1::~Test_1() {	
 	return;
 }
 
+/*********************************************
+*	If your study happens to create objects
+*	that need instantiated only once, do here
+*********************************************/
 void Test_1::DoInit() {
 	Test_1::Initialized = TRUE;
 }
 
+/*********************************************
+*	If you created any other objects, they'll
+*	need to be cleaned up at the end of the 
+*	study's life
+*********************************************/
 void Test_1::DoCleanUp() {}
 
-// Setup of study input values
+/*********************************************
+*	Setup of study input values before study runs
+*********************************************/
 void Test_1::SetReferences(SCPtr sc_) {
 	_sc = sc_;
 	
@@ -29,7 +45,10 @@ void Test_1::SetReferences(SCPtr sc_) {
 	cI = (_sc->Index);
 }
 
-// setup of sc defaults
+/*********************************************
+*	setup of sc defaults, this is the normal 'if(sc.SetDefaults)'
+*	block from a vanilla acsil study
+*********************************************/
 void Test_1::DoSetDefaults() {
 	_sc->GraphName = "Template Study";
 	_sc->StudyDescription = "Template Study";
@@ -42,10 +61,19 @@ void Test_1::DoSetDefaults() {
 	samp1->SetInt(5);
 }
 
-// Entry point into study execution
+/*********************************************
+*	Entry point into study execution, this
+*	is where the actual calculations and
+*	anything else needed will be done
+*********************************************/ 
 void Test_1::DoStudy() {
+	
 	// Sample output to test working
 	Mid->Data.ElementAt(cI) = HLAvg->ElementAt(cI) * (samp1->GetInt()/samp1->GetInt());
+	// This func does the same as above line,
+	// serve as example for further organization
+	SampleIntermediateCalc();
+
 }
 
 void Test_1::Run() {
@@ -60,4 +88,12 @@ void Test_1::Run() {
 		return;
 	}
 	DoStudy();
+}
+
+/********************************************
+*	Sample class function for calculations
+*********************************************/
+void Test_1::SampleIntermediateCalc() {
+	// Sample output to test working
+	Mid->Data.ElementAt(cI) = HLAvg->ElementAt(cI) * (samp1->GetInt() / samp1->GetInt());
 }
