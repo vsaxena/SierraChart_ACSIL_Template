@@ -6,10 +6,11 @@
 typedef enum StudyType
 {
     TEST_STUDY1
-    /* samplestudy1, 
-    *  samplestudy2,
-    *  samplestudy3
-    */
+    /***************** 
+    *   samplestudy1, 
+    *   samplestudy2,
+    *   samplestudy3
+    ******************/
 }StudyType_ ;
 
 typedef s_sc* SCPtr;
@@ -22,6 +23,7 @@ class Study {
         static Study* StartStudy(StudyType StudyType_, SCStudyInterfaceRef sc_);
 
     protected:
+        // Pure virtual funcs for study classes to inherit/define
         virtual void Run() = 0;
         virtual void SetReferences(SCPtr sc_) = 0;
         virtual void DoSetDefaults() = 0;

@@ -75,7 +75,7 @@ void Test_1::DoStudy() {
 	
 	// Sample output to test working
 	Mid->Data.ElementAt(cI) = HLAvg->ElementAt(cI) * (samp1->GetInt()/samp1->GetInt());
-	// This func does the same as above line,
+	
 	// serve as example for further organization
 	SampleIntermediateCalc();
 
@@ -101,9 +101,8 @@ void Test_1::Run() {
 }
 
 /********************************************
-*	Sample class function for calculations
+*	Sample Class function for calculations
 *********************************************/
 void Test_1::SampleIntermediateCalc() {
-	// Sample output to test working
 	Mid->Data.ElementAt(cI) = HLAvg->ElementAt(cI) * (samp1->GetInt() / samp1->GetInt());
 }

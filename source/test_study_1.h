@@ -1,8 +1,6 @@
 #pragma once
 #include "Controller.h"
 
-
-
 class Test_1: public Study
 {
 	public:
